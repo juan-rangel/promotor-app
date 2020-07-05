@@ -1,0 +1,12 @@
+{
+  "name": "Promolate",
+  "displayName": "Promolate",
+  "expo": {
+    "name": "Promolate",
+    "slug": "Promolate",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
