@@ -12,7 +12,6 @@ const styles = StyleSheet.create({
         marginBottom: 5,
         padding: 5,
         borderRadius: 3,
-        textDecorationLine: 'none',
     },
     btn: {
         borderWidth: 1,
@@ -21,7 +20,7 @@ const styles = StyleSheet.create({
         padding: 5,
         borderRadius: 3,
         textDecorationLine: 'none',
-    },
+    }
 })
 
 export default styles;

@@ -1,22 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
+import 'react-native-gesture-handler';
+
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { AuthProvider } from "./contexts/auth";
+import Routes from "./routes"
 
-import { LoginFormComponent } from "./components/login";
-
-export default function App() {
+const App: React.FC = () => {
   return (
-    <View style={styles.container}>
-      <LoginFormComponent nome="Silver"></LoginFormComponent>
-    </View>
-  );
+    <NavigationContainer>
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
+    </NavigationContainer>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
