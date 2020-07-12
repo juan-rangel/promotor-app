@@ -1,21 +1,21 @@
 interface IResponse {
-    token: string,
-    usuario: {
-        nome: string,
-        email: string,
-    }
-};
+  token: string;
+  usuario: {
+    nome: string;
+    email: string;
+  };
+}
 
 export function loginService(): Promise<IResponse> {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve({
-                token: 'token',
-                usuario: {
-                    nome: 'Silverio',
-                    email: 'silver@familia.com.br'
-                }
-            })
-        }, 2500);
-    });
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({
+        token: "token",
+        usuario: {
+          nome: "Silverio",
+          email: "silver@familia.com.br",
+        },
+      });
+    }, 1000);
+  });
 }

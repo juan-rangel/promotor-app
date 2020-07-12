@@ -5,13 +5,13 @@ import styles from "./styles";
 import { UseAuth } from "../../contexts/auth";
 
 const Login: React.FC = () => {
-    const { logar } = UseAuth();
+  const { logar } = UseAuth();
 
-    return (
-        <View style={styles.container}>
-            <Button title="Login" onPress={logar} />
-        </View>
-    )
+  return (
+    <View style={styles.container}>
+      <Button title="Login" onPress={logar} />
+    </View>
+  );
 };
 
 export default Login;

@@ -1,0 +1,30 @@
+#################### Estrutura de pastas
+
+assets: usaremos para manter as mídias usadas no layout como banners, logo e animações.
+
+components: são blocos de elementos que fazem parte do layout e devem ser partes independentes e reutilizaveis
+        para monstarmos nossa user interface.
+
+hooks: são funções que permitem nós tanto acessar quanto mudar os estados e o ciclo de vida de cada componente.
+        Existem hooks padrões como o useState e o useEffect. Nesta pasta colocaremos hooks que determinam
+        alguns comportamentos dentro dos componentes.
+
+pages: são as páginas que teremos, como login, lojas, lojas internas e tarefas.
+
+routes: são as rotas do dispositivo, que chamaram o componente configurado na página.
+
+services: são as comunicações externa como as APIs que consumirmos.
+
+store (arq. flux): é o centro de informações de um conjunto de estados que está apto para receber e entregar exatamente
+        o que o componente requisita, seja de pai para filho ou de filho para pai. Ele nos ajudará a ter a mesma
+        informação em componentes diferentes ou distantes um do outro.
+        
+    actions: são cargas úteis (payload) de informações que enviamos do aplicativo para o store, isso signigica que,
+        as actions descrevem apenas o que está para acontecer e que têm uma ùnica função, enviar e destinar as
+        ações para que o reducer faça. 
+
+    index (reducer): especificam como o estado do aplicativo é alterado em resposta às ações enviadas para a store.
+
+    sagas: atuará como middleware e como um observador, irá interceptar todas as actions enviadas da store.
+        Seu uso será focado em realizar chamadas assincronas, como buscar os dados de uma API ou acessar o cache
+        do navegador

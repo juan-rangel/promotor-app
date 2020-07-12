@@ -3,6 +3,7 @@ import { View, Button, Text } from "react-native";
 import styles from "./styles";
 
 import { UseAuth } from "../../contexts/auth";
+import { RouteProp } from '@react-navigation/native';
 
 const Logout: React.FC = () => {
     const { usuario, deslogar } = UseAuth();

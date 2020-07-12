@@ -5,17 +5,18 @@ import AppRoutes from "./app.routes";
 import { View, ActivityIndicator } from "react-native";
 
 const Routes: React.FC = () => {
-    const { logado, loading } = UseAuth();
+  const { logado, loading } = UseAuth();
 
-    // if (loading) {
-    //     return (
-    //         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    //             <ActivityIndicator size='large' color='#666' />
-    //         </View>
-    //     );
-    // }
+  console.log(loading);
+  if (loading) {
+    return (
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <ActivityIndicator size="large" color="#666" />
+      </View>
+    );
+  }
 
-    return logado ? <AppRoutes /> : <AuthRoutes />;
+  return logado ? <AppRoutes /> : <AuthRoutes />;
 };
 
 export default Routes;
